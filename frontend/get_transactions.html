@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Transactions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 400px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid #007bff;
+        }
+        .header-text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-text h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #007bff;
+        }
+        .transaction-list {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .transaction-list li {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-group button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-text">
+            <h2>Your Transactions</h2>
+        </div>
+
+        <ul class="transaction-list" id="transactionList"></ul>
+
+        <div class="button-group">
+            <button type="button" onclick="window.history.back();">Back</button>
+        </div>
+    </div>
+
+    <script src="get_transactions.js"></script>
+</body>
+</html>

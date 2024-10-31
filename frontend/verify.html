@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 400px; /* Increased width for bigger square */
+            padding: 40px; /* Increased padding for larger area */
+            background-color: #fff;
+            border-radius: 10px; /* Adjusted for a smoother round corner */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* A bit deeper shadow */
+            border: 3px solid #007bff; /* Frame around the square */
+            position: relative; /* For positioning the image */
+        }
+        .header-with-image {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px; /* Space between header and form */
+        }
+        .header-text {
+            flex: 1; /* Take up remaining space */
+            text-align: center;
+        }
+        .header-text h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #007bff;
+        }
+        .verify-image {
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Optional shadow for the image */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Increased space between form groups */
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px; /* Bigger input box */
+            box-sizing: border-box;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px; /* Bigger button */
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px; /* More margin for clearer separation */
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header section -->
+        <div class="header-with-image">
+            <div class="header-text">
+                <h2>Verify Your Email</h2>
+            </div>
+            <img class="verify-image" src="./images/bank.png" alt="Verification Image">
+        </div>
+        
+        <!-- Verify form -->
+        <form id="verifyForm">
+            <div class="form-group">
+                <label for="verificationCode">Verification Code:</label>
+                <input type="text" id="verificationCode" name="verificationCode" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Verify</button>
+            </div>
+            <div class="form-group">
+                <button type="button" id="resendEmail">Resend Email</button>
+            </div>
+            <div class="message" id="message"></div>
+        </form>
+    </div>
+
+    <script src="verify.js"></script>
+</body>
+</html>

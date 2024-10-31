@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 400px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid #007bff;
+            text-align: center;
+        }
+        .header-with-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .header-text {
+            margin-right: 20px;
+        }
+        .header-text h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #007bff;
+        }
+        .header-text h2 {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .bank-image {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            right: 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        .button-group {
+            display: flex; /* Use flexbox for button alignment */
+            justify-content: space-between; /* Space buttons evenly */
+        }
+        .button-group button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: calc(50% - 10px); /* Adjust width for two buttons */
+        }
+        .button-group button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header section -->
+        <div class="header-with-image">
+            <div class="header-text">
+                <h1>Welcome</h1>
+                <h2>SignIn</h2>
+            </div>
+            <img class="bank-image" src="./images/bank.png" alt="Bank Image">
+        </div>
+
+        <!-- Signin form -->
+        <form id="signinForm">
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="gmail">Email:</label>
+                <input type="email" id="gmail" name="gmail" required>
+            </div>
+            <div class="button-group"> <!-- Group for buttons -->
+                <button type="submit">SignIn</button>
+                <button type="button" id="backButton" onclick="window.location.href='/bank/frontend/start.html';">Back</button> <!-- Back button -->
+            </div>
+            
+            <div class="message" id="message"></div>
+        </form>
+    </div>
+
+    <script src="signin.js"></script>
+</body>
+</html>

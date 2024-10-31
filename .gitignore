@@ -1,0 +1,18 @@
+#ignore all
+*
+
+#except:
+!.gitignore
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!*/
+!*.js
+!*.html
+!*.json
+!makefile
+!MakeFile
+!*.png
+
+node_modules/
