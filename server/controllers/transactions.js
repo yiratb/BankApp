@@ -6,6 +6,7 @@ async function createTransaction(req, res) {
     /* const session = await mongoose.startSession(); // Start a new session
     session.startTransaction(); // Begin the transaction */
 
+
     try {
         const {gmail, amount} = req.body;
 
@@ -29,7 +30,7 @@ async function createTransaction(req, res) {
         }
 
         sender.balance -= amount;
-        receiver.balance = receiver.balance + amount;
+        receiver.balance = Number(receiver.balance) + Number(amount);
 
         const transaction = new Transaction({senderId: sender._id, receiverId: receiver._id, amount});
         
